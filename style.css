@@ -5,19 +5,22 @@
 body{
     display: flex;
     justify-content: center;
+   
 
 }
 
 #container{
     width: 400px;
     height: 600px;
-
+    background-color: rgb(185, 178, 178);
 }
 
 #display{
     width: 380px;
     height: 100px;
     margin: 10px;
+    background-color: hsla(138, 75%, 30%, 0.4);
+    border-radius: 5px;
 }
 
 #upperRow{
@@ -49,10 +52,16 @@ body{
     width: 80px;
     height: 80px;
     margin: 5px 10px 5px 10px;    
+    font-size: 48px;
+    text-align: center;
+    background-color: rgb(95, 92, 92);
+    border-radius: 5px;
 }
 
 .big{
     width: 80px;
     height: 280px;
     margin: 5px 10px 5px 10px;    
+    background-color: rgb(218, 92, 19);
+    border-radius: 5px;
 }
