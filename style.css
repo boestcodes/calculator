@@ -1,5 +1,5 @@
 *{
-     box-shadow: inset 0 0 1px #000;
+     box-shadow: inset 0 0 3px #fd0202;
 }
 
 body{
@@ -11,57 +11,91 @@ body{
 
 #container{
     width: 400px;
-    height: 600px;
-    background-color: rgb(185, 178, 178);
+    height: 650px;
+    background-color: rgb(17, 16, 16);
+    border-radius: 5px;
 }
 
 #display{
     width: 380px;
-    height: 100px;
+    height: 130px;
     margin: 10px;
     background-color: hsla(138, 75%, 30%, 0.4);
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+#displayTop{
+    height: 34%;
+}
+
+#displayBottom{
+    height: 66%;
 }
 
 #upperRow{
     width: 400px;
-    height: 180px;
+    height: 200px;
     display: flex;
     flex-wrap: wrap;
 }
 
 #lowerRow{
     width: 400px;
-    height: 280px;
+    height: 300px;
     display: flex;
+
 }
 
-#leftField{
+#lowerRowLeft{
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    height: 300px;
+    height: 300px;  
+}
+
+#leftFieldTop{
+    width: 300px;
+    height: 200px;
     display: flex;
     flex-wrap: wrap;
 }
 
-#rightField{
+#leftFieldBottom{
+    width: 300px;
+    height: 100px;
+    display: flex;
+}
+
+#lowerRowRight{
     width: 100px;
-    height: 300px;   
+    height: 300px; 
+    display: flex;  
+    flex-direction: column;
 }
 
 .small{
     width: 80px;
-    height: 80px;
-    margin: 5px 10px 5px 10px;    
-    font-size: 48px;
-    text-align: center;
-    background-color: rgb(95, 92, 92);
-    border-radius: 5px;
+    height: 80px; 
+    background-color: rgb(146, 138, 138);
 }
 
 .big{
     width: 80px;
-    height: 280px;
-    margin: 5px 10px 5px 10px;    
+    height: 180px;
     background-color: rgb(218, 92, 19);
+}
+
+.bigHorizontal{
+    width: 180px;
+    height: 80px;
+    background-color: rgb(146, 138, 138);
+}
+
+.small, .big, .bigHorizontal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin: 10px 10px 10px 10px;   
     border-radius: 5px;
 }

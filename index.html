@@ -8,7 +8,11 @@
 </head>
 <body>
     <div id="container">
-        <div id="display"></div>
+        <div id="display">
+            <div id="displayTop"></div>
+            <div id="displayBottom"></div>
+
+        </div>
         <div id="upperRow">
             <div id="add" class="small">+</div>
             <div id="sub" class="small">-</div>
@@ -19,26 +23,34 @@
             <div id="nine" class="small">9</div>
             <div id="AC" class="small">AC</div>
         </div>
+
         <div id="lowerRow">
-            <div id="leftField">
-                <div id="four" class="small">4</div>
-                <div id="five" class="small">5</div>
-                <div id="six" class="small">6</div>
-                <div id="one" class="small">1</div>
-                <div id="two" class="small">2</div>
-                <div id="three" class="small">3</div>
-                <div id="??" class="small">??</div>
-                <div id="dec" class="small">.</div>
-                <div id="zero" class="small">0</div>
+            <div id="lowerRowLeft">
+
+                <div id="leftFieldTop">
+                    <div id="four" class="small">4</div>
+                    <div id="five" class="small">5</div>
+                    <div id="six" class="small">6</div>
+                    <div id="one" class="small">1</div>
+                    <div id="two" class="small">2</div>
+                    <div id="three" class="small">3</div>
+                </div>
+
+                <div id="leftFieldBottom">
+                    <div id="dec" class="small">.</div>
+                    <div id="zero" class="bigHorizontal">0</div>
+                </div>
             </div>
-            <div id="rightField">
+
+            <div id="lowerRowRight">
+                <div id="percent" class="small">%</div>
                 <div id="equals" class="big">=</div>
             </div>
         </div>
       
     </div>
 
-    <script href="script.js">
+    <script src="script.js">
         
     </script>
 </body>
