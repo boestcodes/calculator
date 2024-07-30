@@ -20,8 +20,11 @@ body{
     width: 380px;
     height: 130px;
     margin: 10px;
-    background-color: hsla(138, 75%, 30%, 0.4);
+    background-color: hsla(138, 72%, 39%, 0.541);
     border-radius: 10px;
+    color: black;
+    text-align: right;
+    font-size: 48px;
 }
 
 #displayTop{
