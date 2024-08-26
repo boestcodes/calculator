@@ -1,25 +1,23 @@
 const buttons = document.querySelectorAll(".small, .big, .bigHorizontal");
 const display = document.querySelector("#displayBottom");
 const exec = document.querySelector("#equals");
+const clear = document.querySelector("#AC");
 
 let firstNumber;
 let secondNumber;
 let operator;
 
-let firstNumberFinished = false
-let secondNumberFinished = false
-let operatorFinished = false
+let firstNumberFinished = false;
+let secondNumberFinished = false;
+let operatorFinished = false;
 
-const isNumerical = "0123456789"
-const isOperator = "+-*/"
+const isNumerical = "0123456789";
+const isOperator = "+-*/";
 
 let tempButton = "";
 
-//display.textContent = `${firstNumber} ${operator} ${secondNumber}`
-
 buttons.forEach((btn) => {
-    
-    
+        
     btn.addEventListener("click", () => {
         if(secondNumberFinished == true){
             display.textContent = "";
@@ -51,30 +49,32 @@ buttons.forEach((btn) => {
             else{
                 secondNumber = btn.id;
             }
-         console.log(btn.id)
-         display.textContent = display.textContent = firstNumber+" "+operator+" "+secondNumber;
+            console.log(btn.id)
+            display.textContent = display.textContent = firstNumber+" "+operator+" "+secondNumber;
+            
         }
     });
-
-    
 });
 
 
 exec.addEventListener("click", () => {
-    secondNumberFinished = true;
-    firstNumber = "";
-    secondNumber = "";
-    operator = "";
-    firstNumberFinished = false;
-    operate(display.textContent);
-    
-    
+    if(secondNumber){
+        secondNumberFinished = true;
+        firstNumber = "";
+        secondNumber = "";
+        operator = "";
+        firstNumberFinished = false;
+        operate(display.textContent);
+    } else {
+        alert("Calculation not complete!")
+    } 
 });
+
+clear.addEventListener("click", clearScreen);
 
 function operate(content){
     console.log(content)
     let [Num1, op, Num2] = content.split(" ")
-    console.log(Num1)
     let value = 0;
     Num1 = Number(Num1);
     Num2 = Number(Num2);
@@ -92,8 +92,16 @@ function operate(content){
         case '/': value = Num1 / Num2;
         break;
     }
-
+    value = value.toFixed(2);
     display.textContent = value;
-    console.log(value)
-    
+    firstNumber = value;
+}
+
+function clearScreen(){
+    display.textContent = "";
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+    firstNumberFinished = false;
+    secondNumberFinished = false;
 }
