@@ -92,7 +92,12 @@ function operate(content){
         case '/': value = Num1 / Num2;
         break;
     }
-    value = value.toFixed(2);
+    
+    //if number is float, 2 digits max
+    if (!Number.isInteger(value)){
+        value = value.toFixed(2);
+    }
+    
     display.textContent = value;
     firstNumber = value;
 }
